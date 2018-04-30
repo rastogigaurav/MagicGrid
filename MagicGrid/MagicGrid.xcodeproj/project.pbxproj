@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C26C95CB2097A1EC00CEDCBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C95CA2097A1EC00CEDCBF /* AppDelegate.swift */; };
+		C26C95CD2097A1EC00CEDCBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C95CC2097A1EC00CEDCBF /* ViewController.swift */; };
+		C26C95D02097A1ED00CEDCBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26C95CE2097A1ED00CEDCBF /* Main.storyboard */; };
+		C26C95D22097A1ED00CEDCBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26C95D12097A1ED00CEDCBF /* Assets.xcassets */; };
+		C26C95D52097A1ED00CEDCBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26C95D32097A1ED00CEDCBF /* LaunchScreen.storyboard */; };
+		C26C95E02097A1ED00CEDCBF /* MagicGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C95DF2097A1ED00CEDCBF /* MagicGridTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C26C95DC2097A1ED00CEDCBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C26C95BF2097A1EC00CEDCBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C26C95C62097A1EC00CEDCBF;
+			remoteInfo = MagicGrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C26C95C72097A1EC00CEDCBF /* MagicGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26C95CA2097A1EC00CEDCBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C26C95CC2097A1EC00CEDCBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C26C95CF2097A1ED00CEDCBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C26C95D12097A1ED00CEDCBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C26C95D42097A1ED00CEDCBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C26C95D62097A1ED00CEDCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C26C95DB2097A1ED00CEDCBF /* MagicGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26C95DF2097A1ED00CEDCBF /* MagicGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGridTests.swift; sourceTree = "<group>"; };
+		C26C95E12097A1ED00CEDCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C26C95C42097A1EC00CEDCBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C26C95D82097A1ED00CEDCBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C26C95BE2097A1EC00CEDCBF = {
+			isa = PBXGroup;
+			children = (
+				C26C95C92097A1EC00CEDCBF /* MagicGrid */,
+				C26C95DE2097A1ED00CEDCBF /* MagicGridTests */,
+				C26C95C82097A1EC00CEDCBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C26C95C82097A1EC00CEDCBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C26C95C72097A1EC00CEDCBF /* MagicGrid.app */,
+				C26C95DB2097A1ED00CEDCBF /* MagicGridTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C26C95C92097A1EC00CEDCBF /* MagicGrid */ = {
+			isa = PBXGroup;
+			children = (
+				C26C95CA2097A1EC00CEDCBF /* AppDelegate.swift */,
+				C26C95CC2097A1EC00CEDCBF /* ViewController.swift */,
+				C26C95CE2097A1ED00CEDCBF /* Main.storyboard */,
+				C26C95D12097A1ED00CEDCBF /* Assets.xcassets */,
+				C26C95D32097A1ED00CEDCBF /* LaunchScreen.storyboard */,
+				C26C95D62097A1ED00CEDCBF /* Info.plist */,
+			);
+			path = MagicGrid;
+			sourceTree = "<group>";
+		};
+		C26C95DE2097A1ED00CEDCBF /* MagicGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				C26C95DF2097A1ED00CEDCBF /* MagicGridTests.swift */,
+				C26C95E12097A1ED00CEDCBF /* Info.plist */,
+			);
+			path = MagicGridTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C26C95C62097A1EC00CEDCBF /* MagicGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C26C95E42097A1ED00CEDCBF /* Build configuration list for PBXNativeTarget "MagicGrid" */;
+			buildPhases = (
+				C26C95C32097A1EC00CEDCBF /* Sources */,
+				C26C95C42097A1EC00CEDCBF /* Frameworks */,
+				C26C95C52097A1EC00CEDCBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicGrid;
+			productName = MagicGrid;
+			productReference = C26C95C72097A1EC00CEDCBF /* MagicGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C26C95DA2097A1ED00CEDCBF /* MagicGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C26C95E72097A1ED00CEDCBF /* Build configuration list for PBXNativeTarget "MagicGridTests" */;
+			buildPhases = (
+				C26C95D72097A1ED00CEDCBF /* Sources */,
+				C26C95D82097A1ED00CEDCBF /* Frameworks */,
+				C26C95D92097A1ED00CEDCBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C26C95DD2097A1ED00CEDCBF /* PBXTargetDependency */,
+			);
+			name = MagicGridTests;
+			productName = MagicGridTests;
+			productReference = C26C95DB2097A1ED00CEDCBF /* MagicGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C26C95BF2097A1EC00CEDCBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Gaurav Rastogi";
+				TargetAttributes = {
+					C26C95C62097A1EC00CEDCBF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C26C95DA2097A1ED00CEDCBF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C26C95C62097A1EC00CEDCBF;
+					};
+				};
+			};
+			buildConfigurationList = C26C95C22097A1EC00CEDCBF /* Build configuration list for PBXProject "MagicGrid" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C26C95BE2097A1EC00CEDCBF;
+			productRefGroup = C26C95C82097A1EC00CEDCBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C26C95C62097A1EC00CEDCBF /* MagicGrid */,
+				C26C95DA2097A1ED00CEDCBF /* MagicGridTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C26C95C52097A1EC00CEDCBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26C95D52097A1ED00CEDCBF /* LaunchScreen.storyboard in Resources */,
+				C26C95D22097A1ED00CEDCBF /* Assets.xcassets in Resources */,
+				C26C95D02097A1ED00CEDCBF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C26C95D92097A1ED00CEDCBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C26C95C32097A1EC00CEDCBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26C95CD2097A1EC00CEDCBF /* ViewController.swift in Sources */,
+				C26C95CB2097A1EC00CEDCBF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C26C95D72097A1ED00CEDCBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C26C95E02097A1ED00CEDCBF /* MagicGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C26C95DD2097A1ED00CEDCBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C26C95C62097A1EC00CEDCBF /* MagicGrid */;
+			targetProxy = C26C95DC2097A1ED00CEDCBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C26C95CE2097A1ED00CEDCBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C26C95CF2097A1ED00CEDCBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C26C95D32097A1ED00CEDCBF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C26C95D42097A1ED00CEDCBF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C26C95E22097A1ED00CEDCBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C26C95E32097A1ED00CEDCBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C26C95E52097A1ED00CEDCBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M37JW29G64;
+				INFOPLIST_FILE = MagicGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rastogigaurav.MagicGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C26C95E62097A1ED00CEDCBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M37JW29G64;
+				INFOPLIST_FILE = MagicGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rastogigaurav.MagicGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C26C95E82097A1ED00CEDCBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M37JW29G64;
+				INFOPLIST_FILE = MagicGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rastogigaurav.MagicGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicGrid.app/MagicGrid";
+			};
+			name = Debug;
+		};
+		C26C95E92097A1ED00CEDCBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M37JW29G64;
+				INFOPLIST_FILE = MagicGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rastogigaurav.MagicGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicGrid.app/MagicGrid";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C26C95C22097A1EC00CEDCBF /* Build configuration list for PBXProject "MagicGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26C95E22097A1ED00CEDCBF /* Debug */,
+				C26C95E32097A1ED00CEDCBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C26C95E42097A1ED00CEDCBF /* Build configuration list for PBXNativeTarget "MagicGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26C95E52097A1ED00CEDCBF /* Debug */,
+				C26C95E62097A1ED00CEDCBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C26C95E72097A1ED00CEDCBF /* Build configuration list for PBXNativeTarget "MagicGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C26C95E82097A1ED00CEDCBF /* Debug */,
+				C26C95E92097A1ED00CEDCBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C26C95BF2097A1EC00CEDCBF /* Project object */;
+}
