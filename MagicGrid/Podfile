@@ -7,7 +7,6 @@ target 'MagicGrid' do
 
   # Pods for MagicGrid
   pod 'SDWebImage', '~> 4.0'
-  pod 'Alamofire', '~> 4.7'
 
   target 'MagicGridTests' do
     inherit! :search_paths

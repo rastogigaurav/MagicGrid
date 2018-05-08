@@ -8,6 +8,10 @@
 
 import UIKit
 
+fileprivate struct Response : Codable{
+    let items:[GalleryImage]?
+}
+
 protocol GalleryRepositoryProtocol {
     func fetchAllImages(completionHandler:@escaping (_ images:[GalleryImage]?)->())->Void
 }
@@ -15,19 +19,18 @@ protocol GalleryRepositoryProtocol {
 class GalleryRepository: NSObject,GalleryRepositoryProtocol {
     func fetchAllImages(completionHandler: @escaping ([GalleryImage]?) -> ()) {
         if let path = Bundle.main.path(forResource: "InitialGalleryResponse", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-                do{
+            NetworkManager.get(path, success: { data in
+                do {
                     let decoder = JSONDecoder()
-                    let images = try decoder.decode([GalleryImage].self, from: data)
-                    print(images)
-                    completionHandler(images)
-                }catch let error{
+                    let response = try decoder.decode(Response.self, from: data)
+                    print(response.items as Any)
+                    completionHandler(response.items)
+                } catch let error {
                     print(error.localizedDescription)
                 }
-            } catch let error {
-                print(error.localizedDescription)
-            }
+            }, failure: { error in
+                print(error?.localizedDescription as Any)
+            })
         } else {
             print("Invalid filename/path.")
         }

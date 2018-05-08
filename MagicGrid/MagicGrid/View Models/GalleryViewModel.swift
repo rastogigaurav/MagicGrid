@@ -43,7 +43,7 @@ class GalleryViewModel: NSObject {
     }
     
     func cellType(for indexpath:IndexPath)->GalleryCellType{
-        if (self.images.count > 1 && indexpath.row == self.images.count) || self.images.count == 0{
+        if (self.images.count > 0 && indexpath.row == self.images.count) || self.images.count == 0{
             return .addMore
         }
         
@@ -64,17 +64,29 @@ class GalleryViewModel: NSObject {
         self.reloadGallery()
     }
     
-    func canMove(cellAt indexpath:IndexPath)->Bool{
-        if indexpath.row == images.count{
-            return false
-        }
-        return true
+    func canMove(itemFrom indexpath:IndexPath)->Bool{
+        return self.cellType(for: indexpath) == .image
     }
     
-    func swap(cellsAt sourceIndexpath:IndexPath, destinationIndexpath:IndexPath){
-        let temp = self.images[sourceIndexpath.row]
-        self.images[sourceIndexpath.row] = self.images[destinationIndexpath.row]
-        self.images[destinationIndexpath.row] = temp
+    func canDrop(itemAt indexpath:IndexPath)->Bool{
+        return self.cellType(for: indexpath) == .addMore
+    }
+    
+    func size(forCellAt indexpath:IndexPath)->CGSize{
+        let screenWidth = UIScreen.main.bounds.width
+        let scaleFactor = (screenWidth - 41) / 3
+        let cellPadding:CGFloat = 10.0
+        
+        if (self.images.count > 0 && indexpath.row == 0) {
+            return CGSize(width: 2*scaleFactor + cellPadding, height: 2*scaleFactor+cellPadding)
+        }
+        
+        return CGSize(width: scaleFactor, height: scaleFactor)
+    }
+    
+    func move(itemFrom sourceIndexpath:IndexPath,to destinationIndexpath:IndexPath){
+        let temp = self.images.remove(at: sourceIndexpath.item)
+        self.images.insert(temp, at: destinationIndexpath.item)
     }
 }
 

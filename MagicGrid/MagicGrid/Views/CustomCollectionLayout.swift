@@ -10,7 +10,7 @@ import UIKit
 
 class CustomCollectionLayout: UICollectionViewLayout {
     fileprivate var numberOfColumns = 3
-    fileprivate var cellPadding: CGFloat = 6
+    fileprivate var cellPadding: CGFloat = 5
     
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
     
@@ -29,7 +29,10 @@ class CustomCollectionLayout: UICollectionViewLayout {
     }
     
     override func prepare() {
+        
+        super.prepare()
         cache.removeAll()
+        
         guard cache.isEmpty == true, let collectionView = collectionView else {
             return
         }

@@ -8,6 +8,14 @@
 
 import UIKit
 
+struct Gallery {
+    var items:[GalleryImage]
+    
+    private enum CodingKeys: String, CodingKey {
+        case items
+    }
+}
+
 struct GalleryImage : Codable {
     
     var uuid:String
@@ -18,3 +26,5 @@ struct GalleryImage : Codable {
         case imageUrlString
     }
 }
+
+

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class GalleryViewController: UICollectionViewController {
+class GalleryViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     var viewModel:GalleryViewModel!
+    
+    @IBOutlet weak var galleryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,29 +21,47 @@ class GalleryViewController: UICollectionViewController {
         setupViewModel()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.viewModel.didAppear()
+    }
+    
+    // MARK: IBActions
+    @IBAction func handleGesture(_ gesture: UILongPressGestureRecognizer) {
+        switch(gesture.state) {
+        case UIGestureRecognizerState.began:
+            guard let selectedIndexPath = self.galleryCollectionView.indexPathForItem(at: gesture.location(in: self.galleryCollectionView)) else {
+                break
+            }
+            self.galleryCollectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case UIGestureRecognizerState.changed:
+            self.galleryCollectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        case UIGestureRecognizerState.ended:
+            self.galleryCollectionView.endInteractiveMovement()
+        default:
+            self.galleryCollectionView.cancelInteractiveMovement()
+        }
     }
     
     // MARK: Private Methods
     private func setupViewModel(){
         self.viewModel = GalleryViewModel.create()
         self.viewModel.reloadGallery = {[unowned self] in
-            self.collectionView?.reloadData()
+            self.galleryCollectionView.reloadData()
+        }
+    }
+    
+    @objc private func delete(cellIn collectionView:UICollectionView, sender:UIButton){
+        let point = collectionView.convert(sender.center, from: sender.superview!)
+        if let indexPath = collectionView.indexPathForItem(at: point) {
+            self.delete(itemAt: indexPath)
         }
     }
     
     private func delete(itemAt indexpath:IndexPath){
-        self.collectionView?.performBatchUpdates({
-            self.collectionView?.deleteItems(at: [indexpath])
-            self.collectionView?.reloadData()
-            self.collectionView?.collectionViewLayout.invalidateLayout()
+        self.galleryCollectionView.performBatchUpdates({
+            self.galleryCollectionView.deleteItems(at: [indexpath])
+            self.galleryCollectionView.collectionViewLayout.invalidateLayout()
             self.viewModel.remove(imageAt: indexpath)
         }, completion: nil)
     }
@@ -65,20 +85,20 @@ class GalleryViewController: UICollectionViewController {
     }
     
     // MARK: UICollectionViewDataSource
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.viewModel.numberOfSections()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItemsInSection(section: section)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch self.viewModel.cellType(for: indexPath) {
         case .image:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
-            cell.delete = {[unowned self] in
-                self.delete(itemAt: indexPath)
+            cell.delete = { [unowned self] sender in
+                self.delete(cellIn: collectionView, sender: sender)
             }
             cell.configure(cellFor: self.viewModel.image(forCellAt: indexPath))
             return cell
@@ -92,14 +112,26 @@ class GalleryViewController: UICollectionViewController {
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return self.viewModel.canMove(cellAt: indexPath)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return self.viewModel.size(forCellAt: indexPath)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        if collectionView.cellForItem(at: sourceIndexPath) is ImageCell && collectionView.cellForItem(at: destinationIndexPath) is ImageCell{
-            self.viewModel.swap(cellsAt: sourceIndexPath, destinationIndexpath: destinationIndexPath)
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return self.viewModel.canMove(itemFrom: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
+        if viewModel.canDrop(itemAt: proposedIndexPath){
+            return originalIndexPath
         }
+        return proposedIndexPath
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        self.galleryCollectionView.performBatchUpdates({
+            self.galleryCollectionView.collectionViewLayout.invalidateLayout()
+            self.viewModel.move(itemFrom: sourceIndexPath, to: destinationIndexPath)
+        }, completion: nil)
     }
 }
 

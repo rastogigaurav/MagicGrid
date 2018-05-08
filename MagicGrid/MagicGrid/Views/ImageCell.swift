@@ -11,7 +11,7 @@ import SDWebImage
 
 class ImageCell: UICollectionViewCell {
     
-    var delete:(()->Void) = { }
+    var delete:((_ sender:UIButton)->Void) = {_ in }
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -20,6 +20,6 @@ class ImageCell: UICollectionViewCell {
     }
     
     @IBAction func didTapDelete(_ sender: UIButton) {
-        self.delete()
+        self.delete(sender)
     }    
 }
