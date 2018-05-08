@@ -133,5 +133,9 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate,UICollec
             self.viewModel.move(itemFrom: sourceIndexPath, to: destinationIndexPath)
         }, completion: nil)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.showDialog(title: "Item Selected", subtitle: "You have selected the image : " + self.viewModel.image(forCellAt: indexPath).imageUrlString, actionTitle: "OK")
+    }
 }
 
